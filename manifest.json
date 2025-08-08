@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Cursor Image",
+  "version": "1.0",
+  "description": "Change the cursor to custom image",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Choose Cursor Image"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
